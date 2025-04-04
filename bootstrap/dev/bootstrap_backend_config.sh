@@ -2,9 +2,11 @@
 
 # config
 RESOURCE_GROUP="example-resources"
-STORAGE_ACCOUNT_NAME="output-account-storage-name"
+STORAGE_ACCOUNT_NAME="xxxxxxx"
 
 echo "> Getting user info"
+echo "Resource Group: $RESOURCE_GROUP"
+echo "Storage Account: $STORAGE_ACCOUNT_NAME"
 USER_ID=$(az ad signed-in-user show --query id -o tsv)
 SUBSCRIPTION_ID=$(az account show --query id -o tsv)
 

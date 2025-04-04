@@ -1,7 +1,7 @@
 terraform {
   backend "azurerm" {
     resource_group_name  = "example-resources"
-    storage_account_name = "output-account-storage-name"
+    storage_account_name = ""xxxxxxx""
     container_name       = "tfstate"
     key                  = "dev/vnet/terraform.tfstate"
   }
@@ -22,7 +22,7 @@ data "terraform_remote_state" "bootstrap_state" {
   backend = "azurerm"
   config = {
     resource_group_name  = "example-resources"
-    storage_account_name = "output-account-storage-name"
+    storage_account_name = ""xxxxxxx""
     container_name       = "tfstate"
     key                  = "dev/bootstrap/terraform.tfstate"
   }
